@@ -4,50 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vosková batika</title>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet"> <!-- Písmo Crimson Text -->
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet"> <!-- Přidání Crimson Text -->
     <style>
         body {
             background-color: rgb(255, 245, 154); 
-            font-family: "Crimson Text", serif; /* Nastavení písma */
+            font-family: "Crimson Text", serif; 
+            margin: 0;
+            padding: 1em;
+            box-sizing: border-box;
         }
 
-        /* Skrytí obrázku ve výchozím stavu */
-        #obrazek {
-            display: none;
-            width: 300px;
-        }
-
-        /* Skrytí zaškrtávacího políčka */
-        input[type="checkbox"] {
-            display: none;
-        }
-
-        /* Text "obrázek" bude vypadat jako odkaz */
-        label {
-            color: rgb(255, 60, 0);
-            text-decoration: underline;
-            cursor: pointer;
-        }
-
-        /* Když je checkbox zaškrtnutý, obrázek se zobrazí */
-        input[type="checkbox"]:checked + label + #obrazek {
-            display: block;
-        }
-
-        /* Hypertextové odkazy budou červené */
         a {
             color: rgb(255, 60, 0);
-            text-decoration: none;
+            text-decoration: none; 
         }
 
         a:hover {
-            color: rgb(139, 0, 0); /* Tmavě červená při najetí */
-            text-decoration: underline;
+            color: rgb(139, 0, 0); 
+            text-decoration: underline; 
         }
 
-        /* Nadpis bude podtržený */
         h1 {
             text-decoration: underline;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        img {
+            border: 4px solid black; 
+            max-width: 100%; 
+            width: 500px; 
+            height: auto; 
+            display: block; 
+            margin: 1em auto; 
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        /* Media queries pro různé velikosti obrazovek */
+        @media (max-width: 768px) { /* Tablet a menší */
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            img {
+                width: 150px; /* Menší obrázek na tabletu */
+            }
+        }
+
+        @media (max-width: 480px) { /* Mobilní telefon */
+            h1 {
+                font-size: 1.25rem;
+            }
+
+            p {
+                font-size: 0.85rem;
+            }
+
+            img {
+                width: 100px; /* Nejmenší obrázek na mobilu */
+            }
+
+            body {
+                padding: 0.5em;
+            }
         }
     </style>
 </head>
@@ -57,16 +85,10 @@
         Voskovou batikou se rozumí technika dekorování vajec, tkanin i papíru, za pomocí včelího vosku. Tato technika spočívá v nanesení roztaveného vosku na vybraný předmět, jeho obarvení a znovunanesení vosku. Tento postup se opakuje, dokud nejsme spokojeni s výsledkem. Následně sundáme vosk a získáme vícebarevný efekt.
     </p>
     <p>
-        <!-- Zaškrtávací políčko pro zobrazení obrázku -->
-        <input type="checkbox" id="toggle">
-        <label for="toggle">Obrázek</label> <!-- Kliknutí na tento text zobrazí obrázek -->
+        <img src="batika.jpeg" alt="Vosková batika">
     </p>
     <p>
-        <!-- Obrázek, který bude skrytý, dokud není checkbox zaškrtnutý -->
-        <img id="obrazek" src="batika.jpeg" alt="Obrázek batiky">
-    </p>
-    <p>
-        <a href="druha.html">Nástroje využívané pro voskovou batiku</a>
+        <a href="druha.html">Zde si můžete přečíst o používaných nástrojích</a>
     </p>
     <p>
         Již mnoho let se této technice věnuje <strong>Hana Doskočilová</strong>. Je certifikovanou lidovou umělkyní a své výtvory vystavuje i v jihočeském muzeu. Její práci můžete vidět na jejích facebookových stránkách.
